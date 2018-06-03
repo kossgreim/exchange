@@ -1,24 +1,54 @@
-# README
+Exchange Rate
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installing
 
-Things you may want to cover:
+### Downloading the project
 
-* Ruby version
+```
+   $ git clone https://github.com/kossgreim/exchange.git
+   $ cd exchange
+   $ bundle install
+```
 
-* System dependencies
+# API Documentation
 
-* Configuration
+## Exchange rate
 
-* Database creation
+Send POST request to:
 
-* Database initialization
+>http://app_address/v1/exchange
 
-* How to run the test suite
+with body:
 
-* Services (job queues, cache servers, search engines, etc.)
+```json
+{
+	"from": "EUR",
+	"to": "SEK",
+	"amount": 20, 
+}
+```
 
-* Deployment instructions
+#### When request was successful:
 
-* ...
+You'll receive:
+- Status 200 OK
+- User's JSON representation in the response's body
+
+```json
+  {
+    "currency": "SEK",
+    "result": "205.89"
+  }
+```
+
+#### In case of error:
+
+You'll receive:
+- Status code
+- Error JSON representation:
+
+```json
+  {
+    "errors": ["error message"],
+  }
+```
