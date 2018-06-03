@@ -1,4 +1,4 @@
-Exchange Rate
+# Exchange Rate
 
 ## Installing
 
