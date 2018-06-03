@@ -25,6 +25,13 @@ gem 'puma', '~> 3.11'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# gems to work with exchange rates
+gem 'money'
+gem 'eu_central_bank', '~> 1.2'
+
+gem 'representable'
+gem 'multi_json'
+
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
