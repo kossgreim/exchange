@@ -1,4 +1,4 @@
-class ErrorRepresetner < Representable::Decorator
+class ErrorRepresenter < Representable::Decorator
   include Representable::JSON
 
   property :errors
