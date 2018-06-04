@@ -22,9 +22,11 @@ with body:
 
 ```json
 {
-	"from": "EUR",
-	"to": "SEK",
-	"amount": 20, 
+	"exchange_request": {
+		"from": "EUR",
+		"amount": 20,
+		"to": "SEK"
+	}
 }
 ```
 
@@ -49,6 +51,6 @@ You'll receive:
 
 ```json
   {
-    "errors": ["error message"],
+    "errors": ["error message"]
   }
 ```
